@@ -19,8 +19,8 @@ public class DeliveryTest {
     public void delTest() {
         open("http://localhost:9999/");
         $("[placeholder=Город]").setValue("Уфа");
-        $$("[type=tel]").get(0).sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
-        $$("[type=tel]").get(0).setValue(planningDate.generateDate(4));
+        $("[data-test-id=date] input").sendKeys(Keys.chord(Keys.SHIFT, Keys.HOME), Keys.BACK_SPACE);
+        $("[data-test-id=date] input").setValue(planningDate.generateDate(4));
         $("[name=name]").setValue("Иван Иванов");
         $("[name=phone]").setValue("+79372456783");
         $("[class=checkbox__text").click();
